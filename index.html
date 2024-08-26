@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunset</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="body">
+        
+        <div class="shooting-star"></div>
+
+    <div class="sun"></div>
+   
+
+     
+
+        <div class="container" id="container">        
+        <div class="square-star"></div>  <div class="rounded-star"></div>
+        <div class="special-stars-one"></div>
+        <div class="special-stars-two"></div>
+        <div class="special-stars-three"></div>
+        <div class="special-stars-four"></div>
+        <div class="special-stars-five"></div>
+        <div class="special-stars-six"></div>
+        <div class="special-stars-seven"></div>
+        <div class="special-stars-eight"></div>
+        <div class="special-stars-nine"></div>
+        <div class="special-stars-ten"></div>
+        <div class="special-stars-eleven"></div>
+        <div class="special-stars-twelve"></div>
+        <div class="special-stars-thirteen"></div>
+        <div class="special-stars-fourteen"></div>
+     
+            </div>
+
+
+    </div>
+   
+    
+
+ <div class="landscape"></div>
+
+    
+    <script>
+       function createStars(count, isRounded) {
+  const container = document.getElementById('container');
+
+  for (let i = 1; i <= count; i++) {
+    const star = document.createElement('div');
+    star.classList.add(isRounded ? 'rounded-star' : 'square-star');
+
+    const randomX = Math.random() * (container.offsetWidth - 10);
+    const randomY = Math.random() * (container.offsetHeight - 10);
+
+    star.style.transform = `translate(${randomX}px, ${randomY}px)`;
+
+    container.appendChild(star);
+  }
+}
+
+createStars(500, true); // For rounded divs
+createStars(500, false); // For square divs
+
+    </script>
+
+
+</body>
+</html>
